@@ -21,7 +21,6 @@ const Button: React.FC<ButtonProps> = ({
             style={style}
             onClick={onClick}
             type={type}
-            // name={type}
         >
             {icon}
             <span>{title}</span>

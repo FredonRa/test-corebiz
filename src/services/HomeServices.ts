@@ -14,7 +14,6 @@ export default class HomeServices {
     }
 
     static async postNewsletter(data: Newsletter): Promise<string> {
-        console.log(data)
         let url = API_BASE + API_ROUTES.newsletter;
         const response = await fetch(url, {
             method: "POST",

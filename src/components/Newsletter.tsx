@@ -45,7 +45,6 @@ const Newsletter = () => {
         const { name, email } = values;
         
         if (name === "" || !isOnlyText(name)) {
-            console.log("error 1 ", name)
             validForm = false;
             setErrors({...initialErrors, nameError: "Debe ingresar un nombre válido para continuar"});
             return
