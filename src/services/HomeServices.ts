@@ -3,6 +3,7 @@ import { Newsletter } from "../types/Newsletter";
 import { Product } from "../types/product";
 
 export default class HomeServices {
+    // GET METHOD - Get all products from API
     static async getProducts(): Promise<Product[]> {
         let url = API_BASE + API_ROUTES.products;
         const response = await fetch(url)
@@ -13,6 +14,7 @@ export default class HomeServices {
         return response
     }
 
+    // POST METHOD - Send name and email for newsletter
     static async postNewsletter(data: Newsletter): Promise<string> {
         let url = API_BASE + API_ROUTES.newsletter;
         const response = await fetch(url, {

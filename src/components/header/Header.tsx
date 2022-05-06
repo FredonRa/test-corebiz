@@ -18,6 +18,7 @@ const Header: React.FC = () => {
     const [ subtotal, setSubtotal ] = React.useState<number>(0);
     const dispatch = useDispatch();
 
+    // Group the products objects by the id
     let groupBy = (array, key) => {
         return array.reduce((result, obj) => {
            (result[obj[key]] = result[obj[key]] || []).push(obj);

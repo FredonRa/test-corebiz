@@ -1,6 +1,7 @@
 import * as t from '../reducers/types';
 import { Product } from '../types/product';
 
+// Get all products from local storage
 export const setStorageProducts = () => {
     let products = JSON.parse(localStorage.getItem('products'));
     return {
@@ -9,6 +10,7 @@ export const setStorageProducts = () => {
     };
 }
 
+// Receive product for add in the cart
 export const setAddProduct = (product: Product) => {
     let products = JSON.parse(localStorage.getItem('products'));
     if (!products || products == null || product == undefined) products = [];
@@ -20,9 +22,9 @@ export const setAddProduct = (product: Product) => {
     };
 };
 
+// Receive product for remove him in the cart
 export const setRemoveProduct = (product: Product) => {
     let products = JSON.parse(localStorage.getItem('products'));
-    let lengthOfProducts = products.length;
     let cont = 0;
     const indexOfElement = products.filter((prod: Product) => {
         if (cont) return prod;
