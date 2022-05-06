@@ -106,7 +106,6 @@ header {
     min-height: 50px;
     right: 0;
     z-index: 999;
-    border-radius: 0 0 0 10px;
     color: #fff;
     overflow: hidden;
     #close-products {
@@ -172,6 +171,7 @@ header {
     }
     @media screen and (min-width: 768px) {
         max-width: 700px;
+        border-radius: 0 0 0 10px;
     }
 }
 

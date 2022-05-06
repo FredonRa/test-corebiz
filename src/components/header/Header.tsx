@@ -13,7 +13,7 @@ import { useDispatch } from "react-redux";
 
 const Header: React.FC = () => {
     const { width } = useWindowSize();
-    const products = useSelector((store) => store.cartReducer.products);
+    const products = useSelector((store: {cartReducer: {products: Product[] | []}}) => store.cartReducer.products);
     const [ showMenuProductos, setshowMenuProductos ] = React.useState<boolean>(false);
     const [ subtotal, setSubtotal ] = React.useState<number>(0);
     const dispatch = useDispatch();
