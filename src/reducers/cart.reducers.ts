@@ -18,12 +18,12 @@ export const cartReducer = (state = initialState, action) => {
         case t.SET_ADD_PRODUCT:
             return {
                 ...state,
-                products: [...state.products, action.payload],
+                products: [...action.payload],
             };
         case t.SET_REMOVE_PRODUCT:
             return {
                 ...state,
-                products: [...state.products, ...action.payload],
+                products: [...action.payload],
             };
         default:
             return state;

@@ -10,5 +10,7 @@ export type Product = {
         "quantity": number,
         "value": number
       }
-    ]
+    ],
+    "length": number,
+    "finalPrice": number
 }

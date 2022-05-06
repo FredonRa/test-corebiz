@@ -12,39 +12,41 @@ interface FooterProps {
 const Footer: React.FC<FooterProps> = () => {
     return (  
         <footer>
-            <div className="ubication">
-                <h2>Ubicación</h2>
-                <p>Avenida Andrómeda, 2000, Blocco 6 e 8</p>
-                <p>Aphavile SP</p>
-                <p>brasil@corebiz.ag</p>
-                <p>+55 11 3090 1039</p>
-            </div>
-            <div className="contact">
-                <Button 
-                    title='Contáctanos'
-                    icon={
-                        <div className='container-icon'>
-                            <MdEmail size={26} />
-                        </div>
-                    }
-                />
-                <Button 
-                    title='Habla con un consultor' 
-                    icon={
-                        <div className='container-icon'>
-                            <BsHeadset size={26} />
-                        </div>
-                    }
-                />
-            </div>
-            <div className="end">
-                <div className="developedBy">
-                    <span>Desarrollado por</span>
-                    <img src={LogoCorebiz} alt="logo de Corebiz" />
+            <div>
+                <div className="ubication">
+                    <h2>Ubicación<span className='line' style={{backgroundColor: "#fff", width: "50px"}}></span></h2>
+                    <p>Avenida Andrómeda, 2000, Blocco 6 e 8</p>
+                    <p>Aphavile SP</p>
+                    <p>brasil@corebiz.ag</p>
+                    <p>+55 11 3090 1039</p>
                 </div>
-                <div className="poweredBy">
-                    <span>Powered by</span>
-                    <img src={LogoVtex} alt="logo de VTEX" />
+                <div className="contact">
+                    <Button 
+                        title='Contáctanos'
+                        icon={
+                            <div className='container-icon'>
+                                <MdEmail size={26} />
+                            </div>
+                        }
+                    />
+                    <Button 
+                        title='Habla con un consultor' 
+                        icon={
+                            <div className='container-icon'>
+                                <BsHeadset size={26} />
+                            </div>
+                        }
+                    />
+                </div>
+                <div className="end">
+                    <div className="developedBy">
+                        <span>Desarrollado por</span>
+                        <img src={LogoCorebiz} alt="logo de Corebiz" />
+                    </div>
+                    <div className="poweredBy">
+                        <span>Powered by</span>
+                        <img src={LogoVtex} alt="logo de VTEX" />
+                    </div>
                 </div>
             </div>
         </footer>

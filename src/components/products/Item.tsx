@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Product } from '../../types/product';
 import { AiFillStar, AiOutlineStar, AiOutlineCreditCard } from "react-icons/ai";
 import { useDispatch } from "react-redux";
-import { setAddProduct } from "../../actions/cart.actions";
+import { setAddProduct, setRemoveProduct } from "../../actions/cart.actions";
 import Button from '../Button';
 
 interface ItemProps {
@@ -22,11 +22,9 @@ const Item: React.FC<ItemProps> = ({ item }) => {
         value: number
     } | null = installments.length > 0 ? installments[0] : null;
     const percentageDiscount: number | null = listPrice ? parseInt((100 - price / (listPrice / 100)).toFixed(0)) : null;
-    const dispath = useDispatch();
+    const dispatch = useDispatch();
 
-    const addProductToCart = (product: Product) => {
-        dispath(setAddProduct(product))
-    }
+    const addProductToCart = (product: Product) => dispatch(setAddProduct(product));
 
     return React.useMemo(() => {
         return (  

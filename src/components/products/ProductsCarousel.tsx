@@ -22,7 +22,7 @@ const ProductsCarousel: React.FC<ProductsCarouselProps> = ({ items } ) => {
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 5,
+        slidesToShow: 4,
         slidesToScroll: 1,
         arrows: false,
         autoplay: true,
@@ -81,12 +81,14 @@ const ProductsCarousel: React.FC<ProductsCarouselProps> = ({ items } ) => {
       };
     
     return (  
+      <article id='carousel-products'>
+        <h2>Más vendidos <span className='line'></span></h2>
         <Slider 
-        
         {...settings}
         >
             {_renderItems}
         </Slider>
+      </article>
     );
 }
  

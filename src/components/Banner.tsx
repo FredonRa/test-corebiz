@@ -39,7 +39,7 @@ const Banner = () => {
         const { mobile, desktop } = item;
         return (
             <div key={Math.random()}>
-                <img src={width <= 768 ? mobile : desktop} />
+                <img alt='banner' src={width <= 768 ? mobile : desktop} />
             </div>
         )
     }); 

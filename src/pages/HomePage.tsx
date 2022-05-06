@@ -16,7 +16,6 @@ const HomePage: React.FC = () => {
         try {
             const response = await HomeServices.getProducts();
             setProducts(response)
-            console.log(response)    
         } catch (err) {
             console.log(err)
         }

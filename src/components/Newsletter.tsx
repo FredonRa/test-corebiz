@@ -21,7 +21,7 @@ const Newsletter = () => {
     }
 
     const isOnlyText = (text: string) => {
-        const regex = /^[a-zA-Z]+$/;
+        const regex = /[a-zA-Z]+$/;
         return regex.test(text);
     }
 
@@ -60,7 +60,7 @@ const Newsletter = () => {
         if (validForm) {
             try {
                 const response = await HomeServices.postNewsletter(values);
-                toast.success('Mensaje enviado con éxito!');
+                toast.success('Suscripción realizada con éxito!');
                 setValues({...initialValues})
             } catch (error) {
                 toast.error('Ocurrió un error, por favor vuelva a intentarlo en unos momentos')
@@ -81,8 +81,6 @@ const Newsletter = () => {
                     }}
                     value={values.name}
                 />
-                {errors.nameError !== "" && <p className='errorInput'>{errors.nameError}</p>}
-
                 <Input 
                     placeholder="Ingresa tu email" 
                     onChangeText={(text) => handleText("email", text)}
@@ -92,8 +90,6 @@ const Newsletter = () => {
                     }}
                     value={values.email}
                 />
-                {errors.emailError !== "" && <p className='errorInput'>{errors.emailError}</p>}
-
                 <Button 
                     title='Suscribirme' 
                     style={{ 
@@ -108,6 +104,8 @@ const Newsletter = () => {
                     type={"submit"}
                 />
             </form>
+            {errors.nameError !== "" && <p className='errorInput'>* {errors.nameError}</p>}
+            {errors.emailError !== "" && <p className='errorInput'>* {errors.emailError}</p>}
             <Toaster 
                 position="bottom-center"
                 toastOptions={{
