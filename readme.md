@@ -14,10 +14,10 @@
 - MOBILE FIRST Y RESPONSIVE DESIGN
 
 *** DEMO *** 
--https://test-corebiz-omega.vercel.app/
+- https://test-corebiz-omega.vercel.app/
 
 ![Demo image](https://github.com/FredonRa/test-corebiz/blob/master/src/img/screenshot-test.png)
 
 *** RUN ***
 > $ npm install
-> $ npm run dev
+>> $ npm run dev
