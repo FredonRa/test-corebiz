@@ -7,14 +7,14 @@ const initialState: {
     products: []
 };
 
-export const cartReducer = (state = initialState, action) => {
-
-  switch (action.type) {
-      case t.SET_ALL_PRODUCT:
-          return {
-              ...state,
-              products: [...action.payload],
-          };
+export const cartReducer = (state = initialState, action ) => {
+    if (!action.payload) return state
+    switch (action.type) {
+        case t.SET_ALL_PRODUCT:
+            return {
+                ...state,
+                products: [...action.payload],
+            };
         case t.SET_ADD_PRODUCT:
             return {
                 ...state,
